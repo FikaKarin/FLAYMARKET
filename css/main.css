@@ -1,4 +1,9 @@
 body {
-  color: aqua;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body h1 {
+  color: #7b7a7a;
+  background-color: #1e1e1e;
 }
 /*# sourceMappingURL=main.css.map */
