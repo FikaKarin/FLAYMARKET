@@ -1,3 +1,14 @@
+$darkest-color: #1e1e1e;
+$dark-color: #3d3c3c;
+$light-color: #7b7a7a;
+$lightest-color: #e8e5e5;
+$button-text-grey: #606060;
+$button-bg: #bc3838;
+
 body {
-  color: aqua;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  h1 {
+    color: $light-color;
+    background-color: $darkest-color;
+  }
 }
