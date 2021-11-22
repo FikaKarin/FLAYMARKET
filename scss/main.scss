@@ -5,11 +5,60 @@ $lightest-color: #e8e5e5;
 $button-text-grey: #606060;
 $button-bg: #bc3838;
 
-body {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  h1 {
-    color: $light-color;
-    background-color: $darkest-color;
+
+  nav {
+    background-color: $dark-color;
+  }
+  #navbarNavAltMarkup {
+    justify-content: right;
+    a:last-child {
+      margin-left: 2rem;
+    }
   }
 }
 
+#articles {
+  min-height: 100vh;
+  background-color: $darkest-color;
+  .container {
+    padding-top: 4rem;
+    .card {
+      width: 15rem;
+      border: none;
+      border-radius: 0;
+      color: $lightest-color;
+      .header-container {
+        background-color: $dark-color;
+        width: 100%;
+        height: 12rem;
+        img {
+          display: block;
+          margin: 1.3rem auto;
+          width: 12rem;
+        }
+      }
+      .info-container {
+        font-size: 0.8rem;
+        background-color: $button-text-grey;
+        padding: 0 1.5rem 0 1.5rem;
+        .category {
+          font-weight: 600;
+        }
+        .btn-group {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+<<<<<<< HEAD
+=======
+@import "buttons";
+>>>>>>> ed76c25697c0d27942f74fc4679d76bae9035921

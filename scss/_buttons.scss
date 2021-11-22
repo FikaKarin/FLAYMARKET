@@ -1,0 +1,22 @@
+%btn {
+  padding: 0.5rem;
+  border: none;
+  width: 5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 2px 2px 2px #333;
+}
+
+.btn-more {
+  @extend %btn;
+  color: $lightest-color;
+  background-color: $light-color;
+  /* @include set-bg(lighten($primary-color, 10%)); */
+}
+
+.btn-buy {
+  @extend %btn;
+  color: $lightest-color;
+  background-color: $button-bg;
+  /* @include set-bg($secondary-color); */
+}
