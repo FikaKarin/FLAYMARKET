@@ -1,6 +1,7 @@
 class Product {
     constructor(
       name,
+      price,
       description,
       flavorText,
       finishStyle,
@@ -10,6 +11,7 @@ class Product {
       update
     ) {
       this.name = name;
+      this.price=price;
       this.description = description;
       this.flavorText = flavorText;
       this.finishStyle = finishStyle;
@@ -25,6 +27,7 @@ class Product {
   
   weapons.push(new Product(
     "M4A4 Howl",
+    "30 000$",
     "Has been custom painted with the image of a snarling wolf.",
     " The wolf fights against the thunder of Thor.",
     "Custom Paint Job.",
@@ -35,6 +38,7 @@ class Product {
   ));
   weapons.push(new Product(
     "AWP Gungnir",
+    "1 300$",
     "Odin’s spear travels down this custom painted pearlscent blue and ivory AWP.",
     "A weapon for the Allfather.",
     "Gunsmith.",
@@ -45,6 +49,7 @@ class Product {
   ));
   weapons.push(new Product(
     "USP-S Kill Confirmed",
+    "500$",
     "It has been custom painted with the image of a bullet shattering a skull.",
     "2 in the chest, 1 in the head.",
     "Custom Paint Job.",
@@ -55,6 +60,7 @@ class Product {
   ));
   weapons.push(new Product(
     "Desert Eagle Blaze",
+    "15 000$",
     "It has been painted by airbrushing transperant paints over a chrome base coat.",
     "The eye never misses.",
     "Andonized Airbrushed.",
@@ -65,6 +71,7 @@ class Product {
   ));
   weapons.push(new Product(
     "AK 47 Asiimov",
+    "7 500$",
     "It has been custom painted with a sci-fi design.",
     "Anyone can predict the future... a visionary shapes it.",
     "Custom Paint Job.",
