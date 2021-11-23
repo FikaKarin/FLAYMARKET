@@ -5,6 +5,26 @@ $lightest-color: #e8e5e5;
 $button-text-grey: #606060;
 $button-bg: #bc3838;
 
+@import "buttons";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $lightest-color;
+}
+
+nav {
+  background-color: $dark-color;
+  #navbarNavAltMarkup {
+    justify-content: right;
+    a {
+      margin-left: 2rem;
+    }
+  }
+}
+
 #about {
   background-color: $darkest-color;
   .container {
@@ -49,23 +69,6 @@ $button-bg: #bc3838;
   }
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-  nav {
-    background-color: $dark-color;
-    #navbarNavAltMarkup {
-      justify-content: right;
-      a {
-        margin-left: 2rem;
-      }
-    }
-  }
-}
-
 #articles {
   min-height: 80vh;
   background-color: $darkest-color;
@@ -93,20 +96,14 @@ $button-bg: #bc3838;
         font-size: 0.8rem;
         background-color: $button-text-grey;
         padding: 0 1.5rem 0 1.5rem;
-        .category {
-          font-weight: 600;
+        p {
+          font-size: 2rem;
+          margin: 1rem 0;
+          text-align: right;
         }
         .btn-group {
           display: flex;
           justify-content: space-between;
-          button {
-            transform: scale(1);
-            transition: transform 0.2s ease-in;
-
-            &:hover {
-              transform: scale(1.1);
-            }
-          }
         }
       }
       &:hover {
@@ -115,6 +112,7 @@ $button-bg: #bc3838;
     }
   }
 }
+/* } */
 
 .more {
   background-color: $darkest-color;
@@ -149,6 +147,9 @@ $button-bg: #bc3838;
       }
     }
     .text-container {
+      .category {
+        font-weight: 600;
+      }
       padding-top: 4rem;
       button {
         float: right;
@@ -161,10 +162,12 @@ $button-bg: #bc3838;
   background-color: $darkest-color;
   color: $lightest-color;
   padding: 5rem;
+
   text-align: right;
   &-holder {
     list-style: none;
     background-color: $dark-color;
+    padding-bottom: 3rem;
   }
   &-article,
   &-summary {
@@ -189,13 +192,24 @@ $button-bg: #bc3838;
   &-summary {
     border-bottom: none;
     font-size: 2rem;
+    padding-bottom: 3rem;
   }
-  button {
-    width: 10rem;
+  .a-btn {
     margin: 2rem 4rem;
     transform: scale(1);
     box-shadow: 5px 5px 5px #333;
+    text-decoration: none;
+    color: $lightest-color;
+    padding: 0.5rem 1rem;
+    background-color: $button-bg;
+    font-size: 1rem;
+    font-weight: 600;
+    /* transform: scale(1);
     transition: transform 0.2s ease-in;
+    &:hover {
+      transform: scale(1.1);
+      color: $lightest-color;
+    } */
   }
 }
 
@@ -278,7 +292,7 @@ $button-bg: #bc3838;
     transform: rotate(180deg);
   }
 }
-@import "buttons";
+/* @import "buttons"; */
 @import "media";
 
 @media only screen and (max-width: 768px) and (max-height: 850px) {

@@ -8,6 +8,9 @@
   &:hover {
     transform: scale(1.05);
   }
+  &:active {
+    transform: translate(2px, 2px);
+  }
 }
 
 .btn-more {

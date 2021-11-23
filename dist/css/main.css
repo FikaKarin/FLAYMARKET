@@ -1,3 +1,58 @@
+.btn-more, .btn-buy {
+  padding: 0.5rem;
+  border: none;
+  width: 5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  -webkit-box-shadow: 2px 2px 2px #333;
+          box-shadow: 2px 2px 2px #333;
+}
+
+.btn-more:hover, .btn-buy:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.btn-more:active, .btn-buy:active {
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+}
+
+.btn-more {
+  color: #e8e5e5;
+  background-color: #7b7a7a;
+  /* @include set-bg(lighten($primary-color, 10%)); */
+}
+
+.btn-buy {
+  color: #e8e5e5;
+  background-color: #bc3838;
+  /* @include set-bg($secondary-color); */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #e8e5e5;
+}
+
+nav {
+  background-color: #3d3c3c;
+}
+
+nav #navbarNavAltMarkup {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+nav #navbarNavAltMarkup a {
+  margin-left: 2rem;
+}
+
 #about {
   background-color: #1e1e1e;
 }
@@ -46,28 +101,6 @@
   margin-left: 90px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-* nav {
-  background-color: #3d3c3c;
-}
-
-* nav #navbarNavAltMarkup {
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-}
-
-* nav #navbarNavAltMarkup a {
-  margin-left: 2rem;
-}
-
 #articles {
   min-height: 80vh;
   background-color: #1e1e1e;
@@ -107,8 +140,10 @@
   padding: 0 1.5rem 0 1.5rem;
 }
 
-#articles .container .card .info-container .category {
-  font-weight: 600;
+#articles .container .card .info-container p {
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-align: right;
 }
 
 #articles .container .card .info-container .btn-group {
@@ -120,25 +155,12 @@
           justify-content: space-between;
 }
 
-#articles .container .card .info-container .btn-group button {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-}
-
-#articles .container .card .info-container .btn-group button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 #articles .container .card:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
+/* } */
 .more {
   background-color: #1e1e1e;
 }
@@ -190,6 +212,10 @@
   padding-top: 4rem;
 }
 
+.more .more-container .text-container .category {
+  font-weight: 600;
+}
+
 .more .more-container .text-container button {
   float: right;
 }
@@ -204,6 +230,7 @@
 .cart-holder {
   list-style: none;
   background-color: #3d3c3c;
+  padding-bottom: 3rem;
 }
 
 .cart-article, .cart-summary {
@@ -240,19 +267,27 @@
 .cart-summary {
   border-bottom: none;
   font-size: 2rem;
+  padding-bottom: 3rem;
 }
 
-.cart button {
-  width: 10rem;
+.cart .a-btn {
   margin: 2rem 4rem;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-box-shadow: 5px 5px 5px #333;
           box-shadow: 5px 5px 5px #333;
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  text-decoration: none;
+  color: #e8e5e5;
+  padding: 0.5rem 1rem;
+  background-color: #bc3838;
+  font-size: 1rem;
+  font-weight: 600;
+  /* transform: scale(1);
+    transition: transform 0.2s ease-in;
+    &:hover {
+      transform: scale(1.1);
+      color: $lightest-color;
+    } */
 }
 
 .checkout-error {
@@ -387,33 +422,7 @@
   }
 }
 
-.btn-more, .btn-buy {
-  padding: 0.5rem;
-  border: none;
-  width: 5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  -webkit-box-shadow: 2px 2px 2px #333;
-          box-shadow: 2px 2px 2px #333;
-}
-
-.btn-more:hover, .btn-buy:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.btn-more {
-  color: #e8e5e5;
-  background-color: #7b7a7a;
-  /* @include set-bg(lighten($primary-color, 10%)); */
-}
-
-.btn-buy {
-  color: #e8e5e5;
-  background-color: #bc3838;
-  /* @include set-bg($secondary-color); */
-}
-
+/* @import "buttons"; */
 @media (max-width: 994px) {
   .more .flex-container img {
     display: none;
