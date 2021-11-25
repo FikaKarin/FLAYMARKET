@@ -5,6 +5,12 @@
   font-size: 1rem;
   font-weight: 600;
   box-shadow: 2px 2px 2px #333;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: translate(2px, 2px);
+  }
 }
 
 .btn-more {

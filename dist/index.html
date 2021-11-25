@@ -15,6 +15,7 @@
     body {
       background-image: url("assets/alexander-jawfox-Mu0ExSKTOBs-unsplashmatt.jpg");
       background-size: cover;
+      background-attachment: fixed;
       background-repeat: no-repeat;
     }
 
@@ -38,34 +39,26 @@
       color:#7b7a7a;
       text-align:center;
     }
+
+    .btn-index {
+      padding: 0.5rem;
+      margin: 2rem;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e8e5e5;
+      background-color: #bc3838;
+      width:20%;
+
+    }
+
+    #indexLogo {
+      width: 70%;
+    }
   </style>
   <body>
 
-    <!-- Nav bar (to be udpated)-->
-    <nav class="navbar navbar-expand-sm navbar-dark px-5">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">The Flay Market</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#"
-              >View Articles<span class="sr-only"></span
-            ></a>
-            <a class="nav-item nav-link" href="#"><i class="bi bi-cart"></i></a>
-          </div>
-        </div>
-      </div>
-    </nav>
+
 
     <div class="container">
       <div class="row">
@@ -92,13 +85,37 @@
                   mention everyone’s favorite boomstick – the AWP. We’ve got everything you need, for
                   lest we forget: <i>just</i> playing the game does not a player make.</p>
             </div>
-            <div class="col-lg-4">
-              <p></p>
-            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2">
+            <p></p>
+          </div>
+          <div class="col-lg-9">
+            <a href="shop.html"><button class="btn-index">Browse</button></a>
+            <a href="about.html"><button class="btn-index">About Us</button></a>
           </div>
         </div>
       </div>
-  </div>
+      <div class="row">
+        <div class="col md-12">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-5 justify-content-center">
+                  
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-2">
+                  <img src="..//dist/assets/logo.png" alt="CS Logo" id="indexLogo" />
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
 
   </body>
 </html>
