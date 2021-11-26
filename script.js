@@ -106,10 +106,11 @@ window.onload = function () {
     articles.innerHTML += `
     <div class="card mb-4">
     <div class="header-container">
-      <img src="${weapons[i].image}" alt="" />
-      <h4 class="text-center">${weapons[i].name}</h4>
+      <img src="${weapons[i].image}" alt="" /><br>
+      
     </div>
     <div class="info-container pt-3">
+    <h4 class="text-center">${weapons[i].name}</h4>
       <p>
         <span class="category">Description:</span> ${weapons[i].description}
       </p>
@@ -162,7 +163,7 @@ window.onload = function () {
       });
   }
 
-  const cart = document.getElementById("cart").querySelector("ul");
+  const cart = document.getElementById("cart").querySelector("div");
   const boughtItems = [];
   const totalPriceDiv =
     document.getElementsByClassName("cart-summary-price")[0];
@@ -218,12 +219,13 @@ window.onload = function () {
   btn = document.getElementById("buyBtn");
   btn.addEventListener("click", function () {
     let modalBody = document.getElementsByClassName("modal-body")[0];
-    modalBody.innerHTML = "You have bought: <br><br>";
+    modalBody.innerHTML = "";
     console.log(boughtItems.length);
     if (boughtItems.length === 0) {
-      modalBody.innerHTML += "you have nothing in your cart :(";
+      modalBody.innerHTML = "you have nothing in your cart :(";
     }
     if (boughtItems.length >= 1) {
+      modalBody.innerHTML = "You have bought: <br><br>";
       for (let i = 0; i < boughtItems.length; i++) {
         if (boughtItems[i].name === undefined) {
           modalBody.innerHTML = "";
