@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
@@ -15,9 +16,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="/dist/assets/font-awesome-4.7.0/css/font-awesome.css">
     <title>the flayMarket - articles</title>
   </head>
   <body>
+
+    <div id="productInformation" class="container more-container"></div>
     <nav class="navbar navbar-expand-sm navbar-dark px-5">
       <div class="container">
         <a class="navbar-brand" href="index.html">the flayMarket</a>
@@ -40,125 +44,22 @@
             <a class="nav-item nav-link" href="about.html"
               >About<span class="sr-only"></span
             ></a>
-            <a class="nav-item nav-link" href="#cart"
-              ><i class="bi bi-cart"></i
-            ></a>
+            <a class="nav-item nav-link btn"
+              ><i class="bi bi-cart"></i>
+              <span id="counter" class="badge bg-danger">0</span
+            ></a></a>
           </div>
         </div>
       </div>
     </nav>
     <section id="articles">
       <div class="container d-flex flex-wrap justify-content-around">
-        <div class="card mb-4">
-          <div class="header-container">
-            <img src="assets/img-skins/Y7V7472149.jpg" alt="" />
-            <h4 class="text-center">M4A4 Howl</h4>
-          </div>
-          <div class="info-container pt-3">
-            <p>
-              <span class="category">Description:</span> Has been custom painted
-              with the image of a snarling wolf.
-            </p>
-            <p><span class="category">Finish Catalouge:</span> 309</p>
-            <p><span class="category">Finish Style:</span> Custom Paint Job</p>
-            <p><span class="category">Added:</span> 1st May 2014</p>
-            <p><span class="category">Creator:</span> Valve</p>
-            <p><span class="category">Creator:</span> The Hunt Begins</p>
-            <div class="btn-group mt-4 mb-4">
-              <button class="btn-more">more</button>
-              <button class="btn-buy">buy</button>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="header-container">
-            <img src="assets/img-skins/Y7V7472149.jpg" alt="" />
-            <h4 class="text-center">M4A4 Howl</h4>
-          </div>
-          <div class="info-container pt-3">
-            <p>
-              <span class="category">Description:</span> Has been custom painted
-              with the image of a snarling wolf.
-            </p>
-            <p><span class="category">Finish Catalouge:</span> 309</p>
-            <p><span class="category">Finish Style:</span> Custom Paint Job</p>
-            <p><span class="category">Added:</span> 1st May 2014</p>
-            <p><span class="category">Creator:</span> Valve</p>
-            <p><span class="category">Creator:</span> The Hunt Begins</p>
-            <div class="btn-group mt-4 mb-4">
-              <button class="btn-more">more</button>
-              <button class="btn-buy">buy</button>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="header-container">
-            <img src="assets/img-skins/Y7V7472149.jpg" alt="" />
-            <h4 class="text-center">M4A4 Howl</h4>
-          </div>
-          <div class="info-container pt-3">
-            <p>
-              <span class="category">Description:</span> Has been custom painted
-              with the image of a snarling wolf.
-            </p>
-            <p><span class="category">Finish Catalouge:</span> 309</p>
-            <p><span class="category">Finish Style:</span> Custom Paint Job</p>
-            <p><span class="category">Added:</span> 1st May 2014</p>
-            <p><span class="category">Creator:</span> Valve</p>
-            <p><span class="category">Creator:</span> The Hunt Begins</p>
-            <div class="btn-group mt-4 mb-4">
-              <button class="btn-more">more</button>
-              <button class="btn-buy">buy</button>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="header-container">
-            <img src="assets/img-skins/Y7V7472149.jpg" alt="" />
-            <h4 class="text-center">M4A4 Howl</h4>
-          </div>
-          <div class="info-container pt-3">
-            <p>
-              <span class="category">Description:</span> Has been custom painted
-              with the image of a snarling wolf.
-            </p>
-            <p><span class="category">Finish Catalouge:</span> 309</p>
-            <p><span class="category">Finish Style:</span> Custom Paint Job</p>
-            <p><span class="category">Added:</span> 1st May 2014</p>
-            <p><span class="category">Creator:</span> Valve</p>
-            <p><span class="category">Creator:</span> The Hunt Begins</p>
-            <div class="btn-group mt-4 mb-4">
-              <button class="btn-more">more</button>
-              <button class="btn-buy">buy</button>
-            </div>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="header-container">
-            <img src="assets/img-skins/Y7V7472149.jpg" alt="" />
-            <h4 class="text-center">M4A4 Howl</h4>
-          </div>
-          <div class="info-container pt-3">
-            <p>
-              <span class="category">Description:</span> Has been custom painted
-              with the image of a snarling wolf.
-            </p>
-            <p><span class="category">Finish Catalouge:</span> 309</p>
-            <p><span class="category">Finish Style:</span> Custom Paint Job</p>
-            <p><span class="category">Added:</span> 1st May 2014</p>
-            <p><span class="category">Creator:</span> Valve</p>
-            <p><span class="category">Creator:</span> The Hunt Begins</p>
-            <div class="btn-group mt-4 mb-4">
-              <button class="btn-more">more</button>
-              <button class="btn-buy">buy</button>
-            </div>
-          </div>
-        </div>
+   
       </div>
     </section>
-    <section class="more">
+    <!-- <section class="more">
       <div class="container more-container">
-        <h4>M4A4 Howl</h4>
+        <h4 id="productTitle">M4A4 Howl</h4>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="bi bi-x"
@@ -171,7 +72,7 @@
         </svg>
         <div class="flex-container">
           <img src="assets/img-skins/Y7V7472149.jpg" alt="" />
-          <div class="text-container pt-3">
+          <div id="productInfo" class="text-container pt-3">
             <p>
               <span class="category">Description:</span> Has been custom painted
               with the image of a snarling wolf.
@@ -185,34 +86,43 @@
           </div>
         </div>
       </div>
-    </section>
-    <section id="cart" class="cart">
-      <ul class="cart-holder container">
-        <li class="cart-article">
-          <p class="cart-article-title">
-            M4A4 Howl<i class="bi bi-trash-fill"></i>
-          </p>
-          <p class="cart-article-price">$50</p>
-        </li>
-        <li class="cart-article">
-          <p class="cart-article-title">
-            M4A4 Howl<i class="bi bi-trash-fill"></i>
-          </p>
-          <p class="cart-article-price">$50</p>
-        </li>
-        <li class="cart-article">
-          <p class="cart-article-title">
-            M4A4 Howl<i class="bi bi-trash-fill"></i>
-          </p>
-          <p class="cart-article-price">$50</p>
-        </li>
-        <li class="cart-summary">
-          <p class="cart-summary-title">Total</p>
-          <p class="cart-summary-price">$150</p>
-        </li>
-        <button class="btn-buy">Proceed to Checkout</button>
-      </ul>
-    </section>
+    </section> -->
+
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cart</h5>
+            <button type="button" id="closeBtn" class="close btn bg-danger text-white" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modalBg" class="modal-dialog"></div>
+            
+              <section id="cart" class="">
+                <ul class="cart-holder container">
+                 
+                </ul>
+                  <p class="cart-summary">
+                    <p class="cart-summary-title">Total</p>
+                    <p class="cart-summary-price">$0</p>
+                  </p>
+                  
+              </section>
+         
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="buyBtn" class="btn btn-primary">Proceed to Checkout</button>
+            <button type="button" id="closeModalBtn" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+ 
+  </div>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

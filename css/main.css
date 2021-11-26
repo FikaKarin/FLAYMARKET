@@ -139,6 +139,13 @@
           transform: scale(1.05);
 }
 
+#productInformation {
+  background: #3d3c3c;
+  border: 1px solid black;
+  padding: 20px;
+  position: absolute;
+}
+
 .more {
   background-color: #1e1e1e;
 }
@@ -194,6 +201,23 @@
   float: right;
 }
 
+#cart {
+  width: 400px;
+  margin: auto auto;
+}
+
+#cart-cart-holder {
+  padding-left: 0 !important;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline;
+}
+
 .cart {
   background-color: #1e1e1e;
   color: #e8e5e5;
@@ -203,7 +227,6 @@
 
 .cart-holder {
   list-style: none;
-  background-color: #3d3c3c;
 }
 
 .cart-article, .cart-summary {
