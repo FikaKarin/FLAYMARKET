@@ -73,12 +73,11 @@ nav {
   background-color: $darkest-color;
   .container {
     min-width: 250px;
-    max-width: 450px;
+    max-width: 550px;
     margin: auto;
     .col {
       position: relative;
       h1 {
-        --margin-block-end: 0 !important;
         color: #7b7a7a;
         font-weight: normal;
         font-size: 5vw;
