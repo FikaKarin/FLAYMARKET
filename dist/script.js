@@ -101,7 +101,7 @@ weapons.push(
 window.onload = function () {
   let articles = document
     .getElementById("articles")
-    .getElementsByClassName("container")[0];
+    .getElementsByClassName("container d-flex")[0];
   for (let i = 0; i < weapons.length; i++) {
     articles.innerHTML += `
     <div class="card mb-4">
