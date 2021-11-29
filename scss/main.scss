@@ -117,10 +117,13 @@ nav {
 }
 
 #articles {
-  min-height: 80vh;
+  min-height: 94vh;
   background-color: $darkest-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .container {
-    padding-top: 4rem;
+    /* padding-top: 4rem; */
     .card {
       transform: scale(1);
       border: none;
@@ -129,6 +132,7 @@ nav {
       border-radius: 0;
       color: $lightest-color;
       transition: all 0.2s ease-in;
+      height: 34rem;
       .header-container {
         background-color: $dark-color;
         width: 100%;
@@ -140,17 +144,25 @@ nav {
         }
       }
       .info-container {
+        display: flex;
+        flex-direction: column;
         font-size: 0.8rem;
         background-color: $button-text-grey;
         padding: 0 1.5rem 0 1.5rem;
+        height: 22rem;
+        justify-content: space-between;
+        /* position: relative; */
         p {
-          font-size: 2rem;
+          font-size: 1rem;
           margin: 1rem 0;
           text-align: right;
         }
         .btn-group {
           display: flex;
           justify-content: space-between;
+          /* position: absolute;
+          bottom: 0;
+          left: 50%; */
         }
       }
       &:hover {
@@ -215,8 +227,9 @@ nav {
 #cart {
   width: 400px;
   margin: auto auto;
-  &-cart-holder {
+  .cart-holder {
     padding-left: 0 !important;
+    background-color: #fff;
   }
 }
 
@@ -235,12 +248,8 @@ nav {
   text-align: right;
   &-holder {
     list-style: none;
-<<<<<<< HEAD
-    //background-color: $dark-color;
-=======
     background-color: $dark-color;
     padding-bottom: 3rem;
->>>>>>> f6dd3f279f6c294206794c2c670f20f8d649dbda
   }
   &-article,
   &-summary {
