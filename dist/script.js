@@ -106,7 +106,7 @@ window.onload = function () {
     articles.innerHTML += `
     <div class="card mb-4">
     <div class="header-container">
-      <img src="${weapons[i].image}" alt="" /><br>
+      <img src="${weapons[i].image}" alt="${weapons[i].name}" /><br>
       
     </div>
     <div class="info-container pt-3">
@@ -245,9 +245,9 @@ window.onload = function () {
       document.getElementById("modal").style.display = "none";
     });
 
-  document.getElementById("closeBtn").addEventListener("click", function () {
-    document.getElementById("modal").style.display = "none";
-  });
+  // document.getElementById("closeBtn").addEventListener("click", function () {
+  //   document.getElementById("modal").style.display = "none";
+  // });
   divCounter.addEventListener("click", function () {
     //document.getElementById("modalBg").style.display = "block";
     document.getElementById("modal").style.display = "block";
