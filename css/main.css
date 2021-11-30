@@ -48,6 +48,7 @@ ul {
 #landingpage {
   min-height: 110vh;
   width: 100vw;
+  overflow: hidden;
   background: url("../assets/alexander-jawfox-Mu0ExSKTOBs-unsplashmatt.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -301,7 +302,7 @@ nav #navbarNavAltMarkup a {
   }
 } */
 #cart {
-  width: 400px;
+  width: 100%;
   margin: auto auto;
 }
 
@@ -659,15 +660,28 @@ footer .copy-tag {
   #landingpage {
     background-color: #1e1e1e;
   }
+  #landingpage h1 {
+    padding-top: 3rem;
+    font-size: 4rem;
+  }
+  #landingpage .container .row {
+    margin: auto;
+  }
+  #landingpage .container p {
+    margin-bottom: 0;
+  }
   #landingpage .container .btn-index {
     padding: 0.5rem;
-    margin: 2rem;
+    margin: 0 auto 2rem auto;
     border: none;
     font-size: 1rem;
     font-weight: 600;
     color: #e8e5e5;
     background-color: #bc3838;
-    width: 20%;
+    width: 40%;
+  }
+  #landingpage .container #buttonDiv {
+    margin-top: 0;
   }
   #landingpage .container #indexLogo {
     width: 20%;
@@ -680,7 +694,13 @@ footer .copy-tag {
 @media (max-width: 991px) {
   #landingpage {
     background-color: #1e1e1e;
-    background-image: url("../assets/alexander-jawfox-MuExSKTOBs-unsplashmatt.jpg");
+    background-image: none;
+  }
+  #landingpage p {
+    margin: 3rem auto;
+  }
+  #landingpage .line {
+    margin: 0;
   }
   #landingpage .btn-index {
     padding: 0.5rem;
@@ -694,6 +714,7 @@ footer .copy-tag {
   }
   #landingpage #buttonDiv {
     text-align: center;
+    margin-top: 10rem;
   }
   #landingpage #indexLogo {
     width: 100%;
