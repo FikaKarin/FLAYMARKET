@@ -96,3 +96,55 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  #landingpage {
+    background-color: #1e1e1e;
+    
+    .container {
+      .btn-index {
+        padding: 0.5rem;
+        margin: 2rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #e8e5e5;
+        background-color: #bc3838;
+        width: 20%;
+      }
+    
+      #indexLogo {
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  #landingpage {
+    background-color: #1e1e1e;
+    background-image: url("../assets/alexander-jawfox-MuExSKTOBs-unsplashmatt.jpg");
+    
+    .btn-index {
+      padding: 0.5rem;
+      margin: 2rem;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e8e5e5;
+      background-color: #bc3838;
+      width: 20%;
+    }
+
+    #buttonDiv {
+      text-align:center;
+    }
+
+    #indexLogo {
+      width: 100%;
+    }
+  }
+}

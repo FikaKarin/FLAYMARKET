@@ -22,9 +22,10 @@ ul {
 }
 // index
 #landingpage {
-  height: 100vh;
+  min-height: 110vh;
   width: 100vw;
-  background-image: url("../assets/alexander-jawfox-Mu0ExSKTOBs-unsplashmatt.jpg");
+
+  background: url("../assets/alexander-jawfox-Mu0ExSKTOBs-unsplashmatt.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -32,6 +33,7 @@ ul {
   h1 {
     padding-top: 170px;
     font-size: 120px;
+    text-shadow: 3px 0 0 #1e1e1e;
     color: #7b7a7a;
     text-align: center;
   }
