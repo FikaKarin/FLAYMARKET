@@ -24,7 +24,7 @@ ul {
 #landingpage {
   min-height: 110vh;
   width: 100vw;
-
+  overflow: hidden;
   background: url("../assets/alexander-jawfox-Mu0ExSKTOBs-unsplashmatt.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -37,7 +37,6 @@ ul {
     color: #7b7a7a;
     text-align: center;
   }
-
 
   p {
     color: #e8e5e5;
@@ -185,12 +184,12 @@ nav {
   padding: 20px;
   position: absolute;
 }
-.modal-title{
- color: black;
+.modal-title {
+  color: black;
 }
-.products{
+.products {
   color: black !important;
-  i{
+  i {
     color: black;
   }
 }
@@ -240,22 +239,20 @@ nav {
 } */
 
 #cart {
-  width: 400px;
+  width: 100%;
   margin: auto auto;
   .cart-holder {
     padding-left: 0 !important;
     background-color: #fff;
     color: black;
   }
-  .cart-summary-price{
+  .cart-summary-price {
     color: black;
   }
-  .cart-summary-title{
+  .cart-summary-title {
     color: black;
   }
 }
-
-
 
 .cart {
   background-color: $darkest-color;
@@ -304,7 +301,7 @@ nav {
     font-size: 1rem;
     font-weight: 600;
   }
-  .cart-summart-price{
+  .cart-summart-price {
     color: black;
   }
 }

@@ -100,19 +100,30 @@
 @media (max-width: 768px) {
   #landingpage {
     background-color: #1e1e1e;
-    
+    h1 {
+      padding-top: 3rem;
+      font-size: 4rem;
+    }
     .container {
+      .row {
+        margin: auto;
+      }
+      p {
+        margin-bottom: 0;
+      }
       .btn-index {
         padding: 0.5rem;
-        margin: 2rem;
+        margin: 0 auto 2rem auto;
         border: none;
         font-size: 1rem;
         font-weight: 600;
         color: #e8e5e5;
         background-color: #bc3838;
-        width: 20%;
+        width: 40%;
       }
-    
+      #buttonDiv {
+        margin-top: 0;
+      }
       #indexLogo {
         width: 20%;
         display: block;
@@ -126,8 +137,15 @@
 @media (max-width: 991px) {
   #landingpage {
     background-color: #1e1e1e;
-    background-image: url("../assets/alexander-jawfox-MuExSKTOBs-unsplashmatt.jpg");
-    
+    background-image: none;
+
+    p {
+      margin: 3rem auto;
+    }
+    .line {
+      margin: 0;
+    }
+
     .btn-index {
       padding: 0.5rem;
       margin: 2rem;
@@ -140,7 +158,8 @@
     }
 
     #buttonDiv {
-      text-align:center;
+      text-align: center;
+      margin-top: 10rem;
     }
 
     #indexLogo {
