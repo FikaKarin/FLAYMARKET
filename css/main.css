@@ -245,6 +245,18 @@ nav #navbarNavAltMarkup a {
   position: absolute;
 }
 
+.modal-title {
+  color: black;
+}
+
+.products {
+  color: black !important;
+}
+
+.products i {
+  color: black;
+}
+
 /* .more {
   background-color: $darkest-color;
   .more-container {
@@ -296,19 +308,20 @@ nav #navbarNavAltMarkup a {
 #cart .cart-holder {
   padding-left: 0 !important;
   background-color: #fff;
+  color: black;
 }
 
-.hide {
-  display: none;
+#cart .cart-summary-price {
+  color: black;
 }
 
-.show {
-  display: inline;
+#cart .cart-summary-title {
+  color: black;
 }
 
 .cart {
   background-color: #1e1e1e;
-  color: #e8e5e5;
+  color: black;
   padding: 5rem;
   text-align: right;
 }
@@ -368,6 +381,10 @@ nav #navbarNavAltMarkup a {
   background-color: #bc3838;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.cart .cart-summart-price {
+  color: black;
 }
 
 .checkout-error {
