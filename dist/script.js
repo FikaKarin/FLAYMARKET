@@ -102,6 +102,8 @@ window.onload = function () {
   let articles = document
     .getElementById("articles")
     .getElementsByClassName("container d-flex")[0];
+  //skriver ut array av produkter man kan köpa
+  //och ger varje produkt en köp och info knapp med unikt id
   for (let i = 0; i < weapons.length; i++) {
     articles.innerHTML += `
     <div class="card mb-4">
@@ -128,13 +130,17 @@ window.onload = function () {
   </div>
     `;
   }
+  //skapar en enkel räknar för antal produkter som är köpta
   let divCounter = document.getElementById("counter");
   let counter = 0;
+  //loopar igenom dom unika knapparna och gör att dom korresponderar med rätt objekt
+  //dvs trycker man på knapp 1 info får man fram info om objekt 1 i arrayen
   for (let i = 0; i < weapons.length; i++) {
     document
       .getElementById("more-" + [i])
       .addEventListener("click", function () {
         let productInfo = document.getElementById("productInformation");
+        //hämtar koordinater för musen när man klickar på knappen
         let x = event.clientX;
         let y = event.clientY;
         productInfo.innerHTML = `
@@ -147,14 +153,15 @@ window.onload = function () {
             <p><span class="category">Creator:</span>${weapons[i].creator}</p>
             <p><span class="category">Creator:</span> ${weapons[i].update}</p>
            `;
+        //bestämmer var inforutan ska vara baserad på musens koordinater
         productInfo.style.display = "inline";
         productInfo.style.left = x + 20 + "px";
         productInfo.style.top = y - 200 + "px";
         productInfo.style.zIndex = 10;
-
         productInfo.style.width = "250px";
         productInfo.style.color = "white";
       });
+    //lämnar man musen från infoknappen försvinner rutan med produktinformation
     document
       .getElementById("more-" + [i])
       .addEventListener("mouseout", function () {
@@ -164,27 +171,28 @@ window.onload = function () {
   }
 
   const cart = document.getElementById("cart").querySelector("div");
+
+  //skapar en ny array av köpta produkter
   const boughtItems = [];
   const totalPriceDiv =
     document.getElementsByClassName("cart-summary-price")[0];
-  let totalPrice = 0;
+  //hämtar köpknapp
   let buyProduct = document
     .getElementById("articles")
     .getElementsByClassName("btn-buy");
   let totalPriceSum = 0;
-  let cartList = cart.querySelectorAll("li");
   for (let i = 0; i < buyProduct.length; i++) {
     buyProduct[i].addEventListener("click", function () {
+      //variabel för pris samt en rad som ökar räknaren med 1
       const totalPrice = [];
       counter++;
       divCounter.innerHTML = counter;
-      console.log(counter);
-      console.log(weapons[i]);
+      //skapar en kopia av objeket man köper och skickar in den i en array
       const product = Object.assign({}, weapons[i]);
-      product.counter = counter;
       boughtItems.push(product);
+      //skriver ut listan av köpta produkter
+      //om ett objekt är tomt skriver den bara ut en tom div
       cart.innerHTML = "";
-      console.log(boughtItems);
       for (let y = 0; y < boughtItems.length; y++) {
         if (boughtItems[y].name === undefined) {
           cart.innerHTML += `<div class="products"><i></i></div>`;
@@ -193,37 +201,44 @@ window.onload = function () {
           totalPrice.push(boughtItems[y].price);
         }
       }
-      console.log(totalPrice);
+      //kalkylerar det totala priset för alla produkter
       totalPriceSum = totalPrice.reduce((a, b) => a + b);
-      console.log(totalPriceSum);
       totalPriceDiv.innerHTML = "$" + totalPriceSum;
       listCart();
     });
   }
 
+  //hämtar alla div med classen products i vagnen
   function listCart() {
     let list = cart.getElementsByClassName("products");
     for (let i = 0; i < list.length; i++) {
+      //kollar efter <i> i diven och lägger till en funtion på <i>
+      //trycker man på <i>, som är soptunnan tar man bort innehållet i div
+      //reduerar det totala priset och räknaren, antal, produkter, minskar med ett
       list[i].querySelector("i").addEventListener("click", function () {
         list[i].innerHTML = "";
         totalPriceSum -= boughtItems[i].price;
         counter--;
         divCounter.innerHTML = counter;
         totalPriceDiv.innerHTML = "$" + totalPriceSum;
-        console.log(totalPriceSum);
+        //tar bort innehållet i korresponderande objekt  i arrayen boughitems
         boughtItems.splice(i, 1, "");
       });
     }
   }
 
+  //knappen för att öppna modal med köpta produkter
   btn = document.getElementById("buyBtn");
   btn.addEventListener("click", function () {
     let modalBody = document.getElementsByClassName("modal-body")[0];
+    //börjar med att tömma den
     modalBody.innerHTML = "";
-    console.log(boughtItems.length);
+    //kollar igenom boughItems. Om den är noll skrivs texten ut
     if (boughtItems.length === 0) {
       modalBody.innerHTML = "you have nothing in your cart :(";
     }
+    //annars skrivs följande ut
+    //om ett objekt har blivit splicat och därför tomt, skrivs inget ut
     if (boughtItems.length >= 1) {
       modalBody.innerHTML = "You have bought: <br><br>";
       for (let i = 0; i < boughtItems.length; i++) {
@@ -234,27 +249,20 @@ window.onload = function () {
             " för $" + boughtItems[i].price + "<br>";
         }
       }
+      //kalkylationen av det totala priset för produkterna skrivs ut
       modalBody.innerHTML += "<br>Total price: $" + totalPriceSum + "<br>";
-      console.log(totalPriceSum);
     }
   });
 
+  //trycker man på modalens stängknapp sätts display: none på modalen
   document
     .getElementById("closeModalBtn")
     .addEventListener("click", function () {
       document.getElementById("modal").style.display = "none";
     });
 
-  // document.getElementById("closeBtn").addEventListener("click", function () {
-  //   document.getElementById("modal").style.display = "none";
-  // });
+  //trycker man på räknaren bredvid korgen visas modalen med produktlistan
   divCounter.addEventListener("click", function () {
-    //document.getElementById("modalBg").style.display = "block";
     document.getElementById("modal").style.display = "block";
-  });
-  let modalBg = document.getElementById("modalBg");
-  modalBg.addEventListener("click", function () {
-    document.getElementById("modalBg").style.display = "none";
-    document.getElementById("modal").style.display = "none";
   });
 };
