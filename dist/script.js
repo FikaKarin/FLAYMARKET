@@ -1,3 +1,4 @@
+//Class Objekt för produkter - Karin
 class Product {
   constructor(
     name,
@@ -24,8 +25,10 @@ class Product {
   }
 }
 
+//Array för produkter - Karin
 const weapons = [];
 
+//pushar in samtliga produkter i array - Karin
 weapons.push(
   new Product(
     "M4A4 Howl",
@@ -97,6 +100,8 @@ weapons.push(
     "assets/img-skins/AK47Asiimov.png"
   )
 );
+
+
 
 window.onload = function () {
   let articles = document
