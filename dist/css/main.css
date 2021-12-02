@@ -258,49 +258,6 @@ nav #navbarNavAltMarkup a {
   color: black;
 }
 
-/* .more {
-  background-color: $darkest-color;
-  .more-container {
-    padding: 4rem;
-    position: relative;
-    background-color: $light-color;
-    color: $lightest-color;
-    h4 {
-      font-size: 2rem;
-    }
-    .bi {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 3rem;
-      height: 3rem;
-      margin: 1rem;
-      fill: $lightest-color;
-    }
-    .flex-container {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      margin-right: 2rem;
-
-      img {
-        max-width: 30rem;
-        margin-right: 2rem;
-      }
-    }
-    .text-container {
-      .category {
-        font-weight: 600;
-      }
-      padding-top: 4rem;
-      button {
-        float: right;
-      }
-    }
-  }
-} */
 #cart {
   width: 100%;
   margin: auto auto;
@@ -568,7 +525,6 @@ footer .copy-tag {
   }
 }
 
-/* @import "buttons"; */
 /* @media (max-width: 1400px) {
   #articles {
     .container {
